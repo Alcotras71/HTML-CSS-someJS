@@ -347,7 +347,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background: url("../../img/bg1.jpg") -45px -10px/60% repeat-x;
+  background: url("../img/bg1.jpg") -45px -10px/60% repeat-x;
 }
 
 a {
@@ -357,7 +357,7 @@ a {
 .wrapper {
   max-width: 918px;
   margin: 0px auto;
-  background: url("../../img/bg_wrapper.jpg") 0 0 no-repeat;
+  background: url("../img/bg_wrapper.jpg") 0 0 no-repeat;
   -webkit-box-shadow: 0 8px 18px rgba(89, 55, 38, 0.44);
           box-shadow: 0 8px 18px rgba(89, 55, 38, 0.44);
 }
@@ -481,7 +481,7 @@ a {
 .main-middle .container-middle {
   height: 300px;
   max-width: 891px;
-  background: url("../../img/Main-middle/left/ornament_bottom.png") 0 154px no-repeat, url("../../img/Main-middle/right/ornament_bottom.png") 437px 154px no-repeat, url("../../img/Main-middle/left/ornament_top.png") 390px 27px no-repeat, url("../../img/Main-middle/left/ornament-center.png") 445px 76px no-repeat;
+  background: url("../img/Main-middle/left/ornament_bottom.png") 0 154px no-repeat, url("../img/Main-middle/right/ornament_bottom.png") 437px 154px no-repeat, url("../img/Main-middle/left/ornament_top.png") 390px 27px no-repeat, url("../img/Main-middle/left/ornament-center.png") 445px 76px no-repeat;
 }
 
 .image-left {
