@@ -20,129 +20,11 @@
 	<body>
 		<div class="wrapper">
 			<!-- Header -->
-			<header class="header">
-				<div class="container">
-					<div class="header__top">
-						<div class="header__tel">
-							<a href="tel:+74872311345">8 (4872) 31-13-45</a>
-						</div>
-						<div class="header__buttons">
-							<!-- Application -->
-								<div class="header__topbutton application">Оставить заявку</div>
-								<div class="form__application ">
-									<form action="#" method="POST">
-											<input class="form__application_name" type="text" name="fullname" placeholder="ФИО">
-											<input class="form__application_tel" type="tel" name="tel" placeholder="Телефон">
-										<div class="positionsel">
-											<div class="positionsel__header">
-												<span class="positionsel__current">Няня</span>
-												<input id="current_posworker" value="" type="hidden" name="currentpos" >
-												<div class="positionsel__icon"></div>
-											</div>
-											<div class="positionsel__body">
-													<div class="positionsel__item hidden">Няня</div>
-													<div class="positionsel__item">Репетитор</div>
-													<div class="positionsel__item">Гувернантка</div>
-													<div class="positionsel__item">Водитель</div>
-													<div class="positionsel__item">Садовник</div>
-											</div>
-										</div>
-										<div class="schedulesel">
-											<div class="schedulesel__header">
-												<span class="schedulesel__current">График работы</span>
-												<input id="current_schedworker" value="" type="hidden" name="currentsched" >
-												<div class="schedulesel__icon"></div>
-											</div>
-											<div class="schedulesel__body">
-													<div class="schedulesel__item">Полный день</div>
-													<div class="schedulesel__item">Пол дня</div>
-													<div class="schedulesel__item">несколько часов</div>
-													<div class="schedulesel__item">Круглосуточно</div>
-											</div>
-										</div>
-										<textarea name="appdiscription" placeholder="Дополнительная информация"></textarea>
-										<div class="form__application_btn">
-											<input class="btn__application" type="submit" name="appsubmit">
-										</div>
-									</form>
-								</div>
-								<!-- Resume -->
-								<div class="header__topbutton resume">Отправить резюме</div>
-								<div class="form__resume ">
-									<form action="#" method="POST">
-											<input class="form__resume_name" type="text" name="fullname" placeholder="ФИО">
-											<input class="form__resume_tel" type="tel" name="tel" placeholder="Телефон">
-										<div class="resumesel">
-											<div class="resumesel__header">
-												<span class="resumesel__current">Должность</span>
-												<input id="current_resworker" value="" type="hidden" name="currentres" >
-												<div class="resumesel__icon"></div>
-											</div>
-											<div class="resumesel__body">
-													<div class="resumesel__item">Репетитор</div>
-													<div class="resumesel__item">Гувернантка</div>
-													<div class="resumesel__item">Няня</div>
-													<div class="resumesel__item">Водитель</div>
-													<div class="resumesel__item">Садовник</div>
-											</div>
-										</div>
-											<input class="form__resume_education" type="text" name="education" placeholder="Образование">
-											<input class="form__resume_sendresume" type="text" name="sendresume" placeholder="Прикрепить резюме">
-										<div class="form__resume_btn">
-											<input class="btn__resume" type="submit" name="appsubmit">
-										</div>
-									</form>
-								</div>
-						</div>
-					</div>
-				</div>
-				<div class="header__bottom">
-					<ul class="menu-top__left">
-						<li><a class="mainmenu style-a" href="index.html">главная</a></li>
-						<li class="dropdown">
-							<a href="staff.html"><button class="dropbtn">подобрать персонал</button></a><!-- Понимаю, что нельзя вкладывать блочный элемент в строчный. Пытался найти иное решение, по итогу не нашлось. В стилях сделал элемент "а" блочным. -->
-								<div class="dropdown-content">
-									<a class="dropdown-content__link" href="#">О нас</a>
-									<a class="dropdown-content__link" href="#">Задать вопрос</a>
-									<a class="dropdown-content__link" href="#">Это интересно</a>
-									<a class="dropdown-content__link" href="#">Отзывы</a>
-								</div>
-						</li>
-						<li><a class="style-a" href="#">цены</a></li>
-					</ul>
-					<div class="menu-top__logo"><a href="index.html"><img src="img/Header/logo.png" alt="Логотип" /></a></div>
-					<ul class="menu-top__right">
-						<li><a href="#">оставить заявку</a></li>
-						<li><a href="#">оставить вакансию</a></li>
-						<li><a class="contacts" href="#">контакты</a></li>
-					</ul>
-				</div>
-			</header>
-
-
+			<!-- @import header.html -->
 
 				<!-- Main-top -->
-<!-- Main-top -->
-				<div class="main-top">
-					<div class="main-top__slide">
-						<img src="img/Main-top/01.jpg" alt="Слайдер №1" />
-					</div>
-					<div class="main-top__slide">
-						<img src="img/Main-top/02.jpg" alt="Слайдер №2" />
-					</div>
-					<div class="main-top__slide">
-						<img src="img/Main-top/03.jpg" alt="Слайдер №3" />
-					</div>
-					<div class="main-top__slide">
-						<img src="img/Main-top/04.jpg" alt="Слайдер №4" />
-					</div>
-					<div class="main-top__slide">
-						<img src="img/Main-top/05.jpg" alt="Слайдер №5" />
-					</div>
-					<div class="main-top__slide">
-						<img src="img/Main-top/06.jpg" alt="Слайдер №6" />
-					</div>
-				</div>
+				<!-- @import main-top.html -->
+
 
 				<!-- Main-middle -->
 				<div class="main-middle">
@@ -208,31 +90,8 @@
 					</div>
 				</div>
 			<!-- Footer -->
-			<footer class="footer">
-				<div class="wrapper">
-					<div class="footer__top">
-						<ul class="footer__menu">
-							<li><a class="none" href="index.html">главная</a></li>
-							<li><a href="staff.html">подобрать персонал</a></li>
-							<li><a href="#">цены</a></li>
-							<li><a href="index.html">главная</a></li>
-							<li><a href="staff.html">подобрать персонал</a></li>
-							<li><a href="#">цены</a></li>
-						</ul>
-					</div>
-
-
-					<div class="footer__bottom">
-						<div class="footer__tel">
-							<a href="tel:+74872311345">8 (4872) 31-13-45</a>
-						</div>
-						<div class="footer__copyright">
-							<p>Разработка и продвижение сайта компанией «Юни Веб» -</p>
-							<a target="_blank" href="https://uniofweb.ru/"><img src="img/Footer/logo.png" alt="лого" /></a>
-						</div>
-					</div>
-				</div>
-			</footer>		
+			<!-- @import footer.html -->
+		
 		</div>
 		<!-- jQuery library (served from Google) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

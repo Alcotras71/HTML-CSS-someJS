@@ -41,6 +41,20 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "ArialMT";
+  src: url("../fonts/ArialMT.eot");
+  src: local("☺"), url("../fonts/ArialMT.woff") format("woff"), url("../fonts/ArialMT.ttf") format("truetype"), url("../fonts/ArialMT.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ArialMT";
+  src: url("../fonts/ArialMTBold.eot");
+  src: local("☺"), url("../fonts/ArialMTBold.woff") format("woff"), url("../fonts/ArialMTBold.ttf") format("truetype"), url("../fonts/ArialMTBold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
 /*Обнуление*/
 * {
   padding: 0;
@@ -140,6 +154,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.7;
 }
 .header__buttons {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,7 +167,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   margin: 9px 0px 0px 0px;
 }
-.header__buttons a {
+.header__topbutton {
+  cursor: pointer;
   display: inline-block;
   border: 1px solid #d8c992;
   background-color: #d7c074;
@@ -169,7 +185,7 @@ h1, h2, h3, h4, h5, h6 {
   -o-transition: all 0.7s;
   transition: all 0.7s;
 }
-.header__buttons a:hover {
+.header__topbutton:hover {
   -webkit-box-shadow: 0 1px 0 #7e4f13, inset 0 0 0 rgba(255, 255, 255, 0.38);
           box-shadow: 0 1px 0 #7e4f13, inset 0 0 0 rgba(255, 255, 255, 0.38);
   background-color: #8b5814;
@@ -184,6 +200,157 @@ h1, h2, h3, h4, h5, h6 {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+}
+
+.form__application, .form__resume {
+  display: none;
+  position: absolute;
+  top: 28px;
+  right: 0px;
+  z-index: 10;
+  border: 1px solid #cd8e31;
+  background-color: rgba(255, 255, 255, 0.7);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(247, 236, 212, 0.7)), to(rgba(255, 255, 255, 0.7)));
+  background-image: -o-linear-gradient(bottom, rgba(247, 236, 212, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
+  background-image: linear-gradient(to top, rgba(247, 236, 212, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
+  padding: 10px 6px 15px 6px;
+}
+.form__application_name, .form__application_tel, .form__application_education, .form__application_sendresume, .form__resume_name, .form__resume_tel, .form__resume_education, .form__resume_sendresume {
+  width: 308px;
+  -webkit-box-shadow: inset 0 0 0 #8d5408;
+          box-shadow: inset 0 0 0 #8d5408;
+  border: 1px solid #cd8e31;
+  background-color: #ffffff;
+  margin: 0px 0px 15px 0px;
+  color: #55493f;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 8px 10px;
+}
+.form__application textarea, .form__resume textarea {
+  resize: none;
+  color: #55493f;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 10px;
+  width: 308px;
+  height: 73px;
+  -webkit-box-shadow: inset 0 0 0 #8d5408;
+          box-shadow: inset 0 0 0 #8d5408;
+  border: 1px solid #cd8e31;
+  margin: 0px 0px 32px 0px;
+}
+.form__application_btn, .form__resume_btn {
+  text-align: center;
+}
+
+.btn__application, .btn__resume {
+  cursor: pointer;
+  border: 1px solid #ab6e17;
+  background-color: #ab6e17;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#77470b), color-stop(73%, #d39538), color-stop(96%, #f5dcb9), to(#fff9e0));
+  background-image: -o-linear-gradient(bottom, #77470b 0%, #d39538 73%, #f5dcb9 96%, #fff9e0 100%);
+  background-image: linear-gradient(to top, #77470b 0%, #d39538 73%, #f5dcb9 96%, #fff9e0 100%);
+  border-radius: 5px;
+  text-shadow: 0 1px 0 rgba(17, 17, 26, 0.46);
+  color: #ffffff;
+  font-family: Verdana;
+  font-size: 14px;
+  line-height: 25px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
+  padding: 0px 25px;
+}
+.btn__application:hover, .btn__resume:hover {
+  border: 1px solid #c7a865;
+  background-color: #eac87f;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#faedc7), color-stop(13%, #eacf8f), color-stop(58%, #e8c478), color-stop(96%, #fff9e0), to(#fff9e0));
+  background-image: -o-linear-gradient(bottom, #faedc7 0%, #eacf8f 13%, #e8c478 58%, #fff9e0 96%, #fff9e0 100%);
+  background-image: linear-gradient(to top, #faedc7 0%, #eacf8f 13%, #e8c478 58%, #fff9e0 96%, #fff9e0 100%);
+  color: #4e2c1e;
+}
+
+.form__resume {
+  top: 60px;
+}
+
+.positionsel, .schedulesel, .resumesel {
+  margin: 0px 0px 16px 0px;
+  position: relative;
+}
+.positionsel.is-active .positionsel__body, .schedulesel.is-active .positionsel__body, .resumesel.is-active .positionsel__body {
+  display: block;
+}
+.positionsel.is-active .schedulesel__body, .schedulesel.is-active .schedulesel__body, .resumesel.is-active .schedulesel__body {
+  display: block;
+}
+.positionsel.is-active .resumesel__body, .schedulesel.is-active .resumesel__body, .resumesel.is-active .resumesel__body {
+  display: block;
+}
+.positionsel__header, .schedulesel__header, .resumesel__header {
+  background-color: #fff;
+  border: 1px solid #cd8e31;
+  -webkit-box-shadow: inset 0 0 0 #8d5408;
+          box-shadow: inset 0 0 0 #8d5408;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+.positionsel__current, .schedulesel__current, .resumesel__current {
+  color: #55493f;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 32px;
+  padding: 0px 0px 0px 10px;
+}
+.positionsel__icon, .schedulesel__icon, .resumesel__icon {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 32px;
+  margin-left: auto;
+  text-align: center;
+  width: 40px;
+  background: url("../img/Staff/button-drop.png") 15px 0/contain no-repeat;
+}
+.positionsel__body, .schedulesel__body, .resumesel__body {
+  z-index: 5;
+  border: 1px solid #cd8e31;
+  background-color: #fcebc6;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+}
+.positionsel__item, .schedulesel__item, .resumesel__item {
+  cursor: pointer;
+  color: #45250a;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px 10px;
+  -webkit-transition: background 0.5s;
+  -o-transition: background 0.5s;
+  transition: background 0.5s;
+}
+.positionsel__item:hover, .schedulesel__item:hover, .resumesel__item:hover {
+  background-color: #d8af75;
 }
 
 .menu-top__left {
@@ -346,7 +513,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "ArialMT";
   background: url("../img/bg1.jpg") -45px -10px/60% repeat-x;
 }
 
@@ -446,20 +613,15 @@ a {
   background-image: linear-gradient(to top, #150702 0%, #5e3625 48%, #82451c 100%);
   -webkit-background-clip: text;
           background-clip: text;
-  -webkit-transform: scale(1, 0.9);
-      -ms-transform: scale(1, 0.9);
-          transform: scale(1, 0.9);
 }
 .main-middle .displace {
   position: relative;
   right: 30px;
 }
 .main-middle__text {
-  color: #6a5548;
-  font-size: 12.5px;
-  word-spacing: -2px;
+  color: #35190d;
+  font-size: 13px;
   line-height: 16px;
-  font-weight: 700;
 }
 .main-middle__text span {
   display: block;
@@ -562,9 +724,8 @@ a {
 }
 .main-bottom__text p {
   margin: 0px 0px 0px 5px;
-  color: #765a4d;
-  font-size: 13.4px;
-  font-weight: 700;
+  color: #4e2c1e;
+  font-size: 14px;
   line-height: 17px;
   word-spacing: 10px;
   padding: 0px 0px 18px 0px;
@@ -606,11 +767,13 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.PickUpStaff__selecttext {
+.PickUpStaff__showselect {
   text-shadow: 0 1px 0 rgba(17, 17, 26, 0.46);
   color: #45250a;
   font-family: Verdana;
   font-size: 18px;
+}
+.PickUpStaff__selecttext {
   margin: 25px 0px 17px 0px;
 }
 .PickUpStaff__range {
@@ -665,10 +828,10 @@ a {
   background-color: #814b04;
   text-shadow: 0 1px 0 rgba(17, 17, 26, 0.46);
   color: #ffffff;
-  font-size: 16px;
-  font-family: "Arial MT";
-  font-weight: 400;
+  font-size: 15px;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
   line-height: 30px;
 }
 .PickUpStaff__table td {
@@ -704,9 +867,8 @@ a {
   margin: 35px 0px 119px 0px;
 }
 .PickUpStaff__text p {
-  color: #6a4c3e;
-  font-size: 13.4px;
-  font-weight: 700;
+  color: #4e2c1e;
+  font-size: 14px;
   line-height: 17px;
   word-spacing: 10px;
   padding: 0px 0px 18px 0px;
@@ -721,6 +883,7 @@ a {
 }
 
 .btn__pickup {
+  cursor: pointer;
   width: 141px;
   border: 1px solid #ab6e17;
   background-color: #ab6e17;
